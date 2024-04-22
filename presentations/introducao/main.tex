@@ -1,0 +1,55 @@
+\documentclass{beamer}
+
+\usepackage{amsfonts,amsmath,oldgerm}
+\usepackage{listings}
+\usepackage{colortbl}
+\usepackage{listings}
+\usepackage{bbold}
+
+\usepackage{bibentry}
+\usepackage[natbib=true,backend=bibtex,useprefix=false]{biblatex}
+\setbeamercolor*{bibliography entry title}{fg=black}
+\setbeamercolor*{bibliography entry location}{fg=black}
+\setbeamercolor*{bibliography entry note}{fg=black}
+\setbeamertemplate{bibliography item}{}
+\renewcommand*{\bibfont}{\scriptsize}
+\addbibresource{bibliography.bib}
+
+
+
+\usefonttheme[onlymath]{serif}
+\usetheme[numbering=fraction]{metropolis}           % Use metropolis theme
+
+\newcommand{\fullimg}[1]{
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[keepaspectratio,
+                             width=\paperwidth,
+                             height=\paperheight]{#1}
+        };
+    \end{tikzpicture}
+}
+
+
+\begin{document}
+
+\title[Introdução ao Machine Learning]{Introdução ao Machine Learning}
+\author[RSC]{Rafael S. Calsaverini}
+\institute[]{Grupo de Estudos de ML}
+\date{\today}
+
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+    
+\input{sections/01_notas_historicas.tex}
+\input{sections/02_teoria_aprendizado.tex}
+
+\begin{frame}[t,allowframebreaks]
+    \frametitle{References}
+    \printbibliography
+\end{frame}
+
+\end{document}
